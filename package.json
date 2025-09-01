@@ -2,7 +2,7 @@
   "name": "vscode-eval-python",
   "displayName": "Python Eval",
   "description": "Execute Python code in selections and replace with results",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "statiolake",
   "author": "statiolake <statiolake@gmail.com>",
   "license": "MIT",
@@ -36,15 +36,8 @@
     "commands": [
       {
         "command": "pythonEval.evaluateSelection",
-        "title": "Evaluate Python Selection"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "pythonEval.evaluateSelection",
-        "key": "ctrl+shift+p",
-        "mac": "cmd+shift+p",
-        "when": "editorHasSelection"
+        "title": "Evaluate Selected Python Expression",
+        "category": "Python Eval"
       }
     ],
     "configuration": {
