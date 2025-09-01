@@ -1,0 +1,67 @@
+{
+  "name": "vscode-eval-python",
+  "displayName": "Python Eval",
+  "description": "Execute Python code in selections and replace with results",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pythonEval.evaluateSelection",
+        "title": "Evaluate Python Selection"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pythonEval.evaluateSelection",
+        "key": "ctrl+shift+p",
+        "mac": "cmd+shift+p",
+        "when": "editorHasSelection"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Python Eval",
+      "properties": {
+        "pythonEval.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "Path to Python executable",
+          "scope": "machine"
+        },
+        "pythonEval.defaultImports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "import math",
+            "import os",
+            "import sys",
+            "import json",
+            "import datetime",
+            "from datetime import datetime, timedelta"
+          ],
+          "description": "Default imports to include in every execution"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
