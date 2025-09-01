@@ -3,11 +3,32 @@
   "displayName": "Python Eval",
   "description": "Execute Python code in selections and replace with results",
   "version": "0.0.1",
+  "publisher": "statiolake",
+  "author": "statiolake <statiolake@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statiolake/vscode-eval-python.git"
+  },
+  "bugs": {
+    "url": "https://github.com/statiolake/vscode-eval-python/issues"
+  },
+  "homepage": "https://github.com/statiolake/vscode-eval-python#readme",
+  "keywords": [
+    "python",
+    "eval",
+    "execute",
+    "selection",
+    "replace"
+  ],
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
+  ],
+  "extensionKind": [
+    "ui"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
